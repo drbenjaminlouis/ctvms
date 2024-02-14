@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".customerPersonalInfo">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/continuebtn"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/greenbutton"
+        android:fontFamily="@font/lato"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/stateValue"
+        app:layout_constraintStart_toStartOf="@+id/districtValue"
+        app:layout_constraintTop_toBottomOf="@+id/cusdistrictDrop" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/dob"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/inputshape"
+        android:backgroundTint="#252929"
+        android:editable="false"
+        android:fontFamily="@font/poppins"
+        android:gravity="center_vertical"
+        android:hint="DD/MM/YYYY"
+        android:paddingStart="12sp"
+        android:popupBackground="@drawable/inputshape"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/cusMobileValue"
+        app:layout_constraintStart_toStartOf="@+id/cusDOBLabel"
+        app:layout_constraintTop_toBottomOf="@+id/cusDOBLabel" />
+
+    <ImageView
+        android:id="@+id/dobdropicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="#252929"
+        app:layout_constraintBottom_toBottomOf="@+id/dob"
+        app:layout_constraintEnd_toEndOf="@+id/dob"
+        app:layout_constraintTop_toTopOf="@+id/dob"
+        app:srcCompat="@drawable/calenderwhite" />
+
+    <Spinner
+        android:id="@+id/gender"
+        android:layout_width="172dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/inputshape"
+        android:backgroundTint="#252929"
+        android:popupBackground="@drawable/inputshape"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/cusGenderLabel"
+        app:layout_constraintTop_toBottomOf="@+id/cusGenderLabel" />
+
+    <ImageView
+        android:id="@+id/genderdropicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gender"
+        app:layout_constraintEnd_toEndOf="@+id/gender"
+        app:layout_constraintTop_toTopOf="@+id/gender"
+        app:srcCompat="@drawable/dropdownwhite" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/emailValue2"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/inputshape"
+        android:backgroundTint="#252929"
+        android:hint="Enter Your Email ID"
+        android:paddingLeft="12sp"
+        android:textColor="@color/white"
+        android:textColorHint="#9B9B9B"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cusFullNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/cusFullNameLabel" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/poppins"
+        android:text="*"
+        android:textColor="#FF0000"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@+id/cusFullNameLabel"
+        app:layout_constraintTop_toTopOf="@+id/cusFullNameLabel" />
+
+    <TextView
+        android:id="@+id/cusFullNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="Full Name"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView50" />
+
+    <TextView
+        android:id="@+id/cusEmailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="Email"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/emailValue2"
+        app:layout_constraintTop_toBottomOf="@+id/emailValue2" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/poppins"
+        android:text="*"
+        android:textColor="#FF0000"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@+id/cusEmailLabel"
+        app:layout_constraintTop_toTopOf="@+id/cusEmailLabel" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/cusemailValue"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/inputshape"
+        android:backgroundTint="#252929"
+        android:hint="Enter Your Email ID"
+        android:paddingLeft="12sp"
+        android:textColor="@color/white"
+        android:textColorHint="#9B9B9B"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/emailValue2"
+        app:layout_constraintStart_toStartOf="@+id/cusEmailLabel"
+        app:layout_constraintTop_toBottomOf="@+id/cusEmailLabel" />
+
+    <TextView
+        android:id="@+id/cusMobileLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="Mobile Number"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/cusemailValue"
+        app:layout_constraintTop_toBottomOf="@+id/cusemailValue" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/poppins"
+        android:text="*"
+        android:textColor="#FF0000"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@+id/cusMobileLabel"
+        app:layout_constraintTop_toTopOf="@+id/cusMobileLabel" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/cusMobileValue"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/inputshape"
+        android:backgroundTint="#252929"
+        android:hint="Enter Your Email ID"
+        android:paddingLeft="12sp"
+        android:textColor="@color/white"
+        android:textColorHint="#9B9B9B"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/cusemailValue"
+        app:layout_constraintStart_toStartOf="@+id/cusMobileLabel"
+        app:layout_constraintTop_toBottomOf="@+id/cusMobileLabel" />
+
+    <TextView
+        android:id="@+id/cusGenderLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="Gender"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/cusMobileValue"
+        app:layout_constraintTop_toBottomOf="@+id/cusMobileValue" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/poppins"
+        android:text="*"
+        android:textColor="#FF0000"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@+id/cusGenderLabel"
+        app:layout_constraintTop_toTopOf="@+id/cusGenderLabel" />
+
+    <TextView
+        android:id="@+id/cusDOBLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="DOB"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/gender"
+        app:layout_constraintTop_toBottomOf="@+id/cusMobileValue" />
+
+    <TextView
+        android:id="@+id/cusAddressLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="Address"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/gender"
+        app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/poppins"
+        android:text="*"
+        android:textColor="#FF0000"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@+id/cusAddressLabel"
+        app:layout_constraintTop_toTopOf="@+id/cusAddressLabel" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/cusAddressValue"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/inputshape"
+        android:backgroundTint="#252929"
+        android:hint="Enter Your Email ID"
+        android:paddingLeft="12sp"
+        android:textColor="@color/white"
+        android:textColorHint="#9B9B9B"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/dob"
+        app:layout_constraintStart_toStartOf="@+id/cusAddressLabel"
+        app:layout_constraintTop_toBottomOf="@+id/cusAddressLabel" />
+
+    <TextView
+        android:id="@+id/cusCityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="City"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/cusAddressValue"
+        app:layout_constraintTop_toBottomOf="@+id/cusAddressValue" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/poppins"
+        android:text="*"
+        android:textColor="#FF0000"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@+id/cusCityLabel"
+        app:layout_constraintTop_toTopOf="@+id/cusCityLabel" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/cusCityValue"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@drawable/inputshape"
+        android:backgroundTint="#252929"
+        android:hint="Enter Your Email ID"
+        android:paddingLeft="12sp"
+        android:textColor="@color/white"
+        android:textColorHint="#9B9B9B"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/cusAddressValue"
+        app:layout_constraintStart_toStartOf="@+id/cusCityLabel"
+        app:layout_constraintTop_toBottomOf="@+id/cusCityLabel" />
+
+    <TextView
+        android:id="@+id/cusDistrictLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="Gender"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/cusCityValue"
+        app:layout_constraintTop_toBottomOf="@+id/cusCityValue" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/poppins"
+        android:text="*"
+        android:textColor="#FF0000"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@+id/cusDistrictLabel"
+        app:layout_constraintTop_toTopOf="@+id/cusDistrictLabel" />
+
+    <Spinner
+        android:id="@+id/districtValue"
+        android:layout_width="172dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/inputshape"
+        android:backgroundTint="#252929"
+        android:popupBackground="@drawable/inputshape"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/cusDistrictLabel"
+        app:layout_constraintTop_toBottomOf="@+id/cusDistrictLabel" />
+
+    <ImageView
+        android:id="@+id/cusdistrictDrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/districtValue"
+        app:layout_constraintEnd_toEndOf="@+id/districtValue"
+        app:layout_constraintTop_toTopOf="@+id/districtValue"
+        app:srcCompat="@drawable/dropdownwhite" />
+
+    <TextView
+        android:id="@+id/cusStateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="State"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/districtValue"
+        app:layout_constraintTop_toBottomOf="@+id/cusCityValue" />
+
+    <Spinner
+        android:id="@+id/stateValue"
+        android:layout_width="172dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/inputshape"
+        android:backgroundTint="#252929"
+        android:popupBackground="@drawable/inputshape"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/cusStateLabel"
+        app:layout_constraintTop_toBottomOf="@+id/cusStateLabel" />
+
+    <ImageView
+        android:id="@+id/cusstateDrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/stateValue"
+        app:layout_constraintEnd_toEndOf="@+id/stateValue"
+        app:layout_constraintTop_toTopOf="@+id/stateValue"
+        app:srcCompat="@drawable/dropdownwhite" />
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Personal Info"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#119B1F</color>
+    <color name="transparentcolor">#00119B1F</color>
+    <color name="grey">#1F201F</color>
+    <color name="paidTextColor">#64CC25</color>
+    <color name="pendingTextColor">#D6121E</color>
+    <color name="default_button_color">#1C8314</color>
+</resources>

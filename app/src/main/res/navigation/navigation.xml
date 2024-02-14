@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/adminhomeFragment">
+
+    <fragment
+        android:id="@+id/manageFragment"
+        android:name="com.example.ctvms.Fragments.manageFragment"
+        android:label="fragment_manage"
+        tools:layout="@layout/fragment_manage" />
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.example.ctvms.Fragments.reportsFragment"
+        android:label="fragment_reports"
+        tools:layout="@layout/fragment_reports" />
+    <fragment
+        android:id="@+id/transactionsFragment"
+        android:name="com.example.ctvms.Fragments.transactionsFragment"
+        android:label="fragment_transactions"
+        tools:layout="@layout/fragment_transactions" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.ctvms.Fragments.settingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/adminhomeFragment"
+        android:name="com.example.ctvms.Fragments.adminhomeFragment"
+        android:label="fragment_adminhome"
+        tools:layout="@layout/fragment_home" />
+</navigation>

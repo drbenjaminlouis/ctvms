@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "460166040013",
+    "project_id": "aj-ctvms",
+    "storage_bucket": "aj-ctvms.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460166040013:android:4d311535a445482b1a9c84",
+        "android_client_info": {
+          "package_name": "com.example.ctvms"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZ3XhyVkLpY81acudLLlsXCI2H6vga4P4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

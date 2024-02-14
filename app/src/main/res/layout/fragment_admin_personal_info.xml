@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:tag="admin_personal_info_frag">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_margin="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createtitle">
+
+        <TextView
+            android:id="@+id/fullnamelabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Full Name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fullname"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/inputshape"
+            android:hint="Full Name"
+            android:maxLines="1"
+            android:inputType="textPersonName"
+            android:paddingLeft="12sp"
+            android:paddingRight="12sp"
+            android:textColor="@color/black"
+            android:textColorHint="#5C5656"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/fullnamelabel"
+            app:layout_constraintTop_toBottomOf="@+id/fullnamelabel" />
+
+        <TextView
+            android:id="@+id/emaillabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Email ID"
+            app:layout_constraintStart_toStartOf="@+id/fullname"
+            app:layout_constraintTop_toBottomOf="@+id/fullname" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/inputshape"
+            android:hint="Email"
+            android:maxLines="1"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="12sp"
+            android:textColor="@color/black"
+            android:textColorHint="#5C5656"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/emaillabel"
+            app:layout_constraintTop_toBottomOf="@+id/emaillabel" />
+
+        <TextView
+            android:id="@+id/mobilelabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Mobile Number"
+            app:layout_constraintStart_toStartOf="@+id/email"
+            app:layout_constraintTop_toBottomOf="@+id/email" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mobile"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/inputshape"
+            android:hint="Enter Your Mobile Number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:paddingLeft="12sp"
+            android:textColor="@color/black"
+            android:textColorHint="#5C5656"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@+id/email"
+            app:layout_constraintStart_toStartOf="@+id/mobilelabel"
+            app:layout_constraintTop_toBottomOf="@+id/mobilelabel" />
+
+        <TextView
+            android:id="@+id/genderlabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Gender"
+            app:layout_constraintStart_toStartOf="@+id/mobile"
+            app:layout_constraintTop_toBottomOf="@+id/mobile" />
+
+        <Spinner
+            android:id="@+id/gender"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/inputshape"
+            android:textColor="@color/black"
+            android:textColorHint="#5C5656"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@+id/doblabel"
+            app:layout_constraintStart_toStartOf="@+id/genderlabel"
+            app:layout_constraintTop_toBottomOf="@+id/genderlabel" />
+
+        <ImageView
+            android:id="@+id/genderdropicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/gender"
+            app:layout_constraintEnd_toEndOf="@+id/gender"
+            app:layout_constraintTop_toTopOf="@+id/gender"
+            app:srcCompat="@drawable/dropdown" />
+
+        <TextView
+            android:id="@+id/doblabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="140dp"
+            android:text="DOB"
+            app:layout_constraintEnd_toEndOf="@+id/mobile"
+            app:layout_constraintTop_toBottomOf="@+id/mobile" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dob"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/inputshape"
+            android:editable="false"
+            android:fontFamily="@font/poppins"
+            android:gravity="center_vertical"
+            android:hint="DD/MM/YYYY"
+            android:inputType="none"
+            android:paddingStart="12sp"
+            android:popupBackground="@drawable/inputshape"
+            android:textColor="@color/black"
+            android:textColorHint="#5C5656"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@+id/mobile"
+            app:layout_constraintStart_toStartOf="@+id/doblabel"
+            app:layout_constraintTop_toBottomOf="@+id/doblabel" />
+
+        <ImageView
+            android:id="@+id/dobdropicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/dob"
+            app:layout_constraintEnd_toEndOf="@+id/dob"
+            app:layout_constraintTop_toTopOf="@+id/dob"
+            app:srcCompat="@drawable/calender" />
+
+        <TextView
+            android:id="@+id/addresslabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Address"
+            app:layout_constraintStart_toStartOf="@+id/gender"
+            app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/address"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/inputshape"
+            android:hint="Address"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingLeft="12sp"
+            android:textColor="@color/black"
+            android:textColorHint="#5C5656"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@+id/dob"
+            app:layout_constraintStart_toStartOf="@+id/addresslabel"
+            app:layout_constraintTop_toBottomOf="@+id/addresslabel" />
+
+        <TextView
+            android:id="@+id/districtlabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="District"
+            app:layout_constraintStart_toStartOf="@+id/address"
+            app:layout_constraintTop_toBottomOf="@+id/address" />
+
+        <Spinner
+            android:id="@+id/district"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/inputshape"
+            android:textColor="@color/black"
+            android:textColorHint="#5C5656"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@+id/statelabel"
+            app:layout_constraintStart_toStartOf="@+id/districtlabel"
+            app:layout_constraintTop_toBottomOf="@+id/districtlabel" />
+
+        <ImageView
+            android:id="@+id/districtdropicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/district"
+            app:layout_constraintEnd_toEndOf="@+id/district"
+            app:layout_constraintTop_toTopOf="@+id/district"
+            app:srcCompat="@drawable/dropdown" />
+
+        <TextView
+            android:id="@+id/statelabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="140dp"
+            android:text="State"
+            app:layout_constraintEnd_toEndOf="@+id/address"
+            app:layout_constraintTop_toBottomOf="@+id/address" />
+
+        <Spinner
+            android:id="@+id/state"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/inputshape"
+            android:textColor="@color/black"
+            android:textColorHint="#5C5656"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@+id/address"
+            app:layout_constraintStart_toStartOf="@+id/statelabel"
+            app:layout_constraintTop_toBottomOf="@+id/statelabel" />
+
+        <ImageView
+            android:id="@+id/statedropicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/state"
+            app:layout_constraintEnd_toEndOf="@+id/state"
+            app:layout_constraintTop_toTopOf="@+id/state"
+            app:srcCompat="@drawable/dropdown" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/continuebtn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/greenbutton"
+            android:fontFamily="@font/lato"
+            android:text="Continue"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/state"
+            app:layout_constraintStart_toStartOf="@+id/district"
+            app:layout_constraintTop_toBottomOf="@+id/district" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

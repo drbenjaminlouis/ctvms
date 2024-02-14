@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".PaymentDetails">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginBtn"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/greenbutton"
+        android:fontFamily="@font/lato"
+        android:text="Back to Home"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout22"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout22"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout22" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout22"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/recentshape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout23"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView46">
+
+            <TextView
+                android:id="@+id/addCusCCRFLabel"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="#181D1D"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="CRF No"
+                android:textColor="#939999"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/addCusNameLabel"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="#181D1D"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="Name"
+                android:textColor="#939999"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addCusCCRFLabel" />
+
+            <TextView
+                android:id="@+id/addCusEmailLabel"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="#181D1D"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="Email"
+                android:textColor="#939999"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addCusNameLabel" />
+
+            <TextView
+                android:id="@+id/addCusBasePlanLabel"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="#181D1D"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="Base Plan"
+                android:textColor="#939999"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addCusEmailLabel" />
+
+            <TextView
+                android:id="@+id/addCusaddonLabel"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="#181D1D"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="Additional Plans"
+                android:textColor="#939999"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addCusBasePlanLabel" />
+
+            <TextView
+                android:id="@+id/addCusInstallationLabel"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="#181D1D"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="Installation Date"
+                android:textColor="#939999"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addCusaddonLabel" />
+
+            <TextView
+                android:id="@+id/addCusPlanStartLabel"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="#181D1D"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="Plan Starting Date"
+                android:textColor="#939999"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addCusInstallationLabel" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textView46"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/poppins_black"
+            android:text="Customer Added Successfully"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:id="@+id/paymentDetailsValuesLayout"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout23"
+            app:layout_constraintTop_toBottomOf="@+id/textView46">
+
+            <TextView
+                android:id="@+id/addCusCCRFValue"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="#181D1D"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="000001"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/addCusNameValue"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="#181D1D"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="John Doe"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addCusCCRFValue" />
+
+            <TextView
+                android:id="@+id/addCusEmailValue"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="#181D1D"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="johndoe@gmail.com"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addCusNameValue" />
+
+            <TextView
+                android:id="@+id/addCusBasePlanValue"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="#181D1D"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="Classic Prime (INR 250)"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addCusEmailValue" />
+
+            <TextView
+                android:id="@+id/addCusAddOnValue"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="#181D1D"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="No"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addCusBasePlanValue" />
+
+            <TextView
+                android:id="@+id/addCusInstallationValue"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="#181D1D"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:hint="01 Jan 2024"
+                android:textColorHint="@color/white"
+                android:paddingStart="10dp"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addCusAddOnValue" />
+
+            <TextView
+                android:id="@+id/addCusPlanStartValue"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="#181D1D"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:hint="01 Jan 2024"
+                android:paddingStart="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addCusInstallationValue" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="3dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/dashed"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintEnd_toStartOf="@+id/paymentDetailsValuesLayout"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout23"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout23" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/dashed"
+            app:layout_constraintEnd_toEndOf="@+id/paymentDetailsValuesLayout"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout23"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout23" />
+
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="@font/poppins"
+            android:text="NB : Customer Username &amp; Password Is Shared Via Registered Email ID."
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/success"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

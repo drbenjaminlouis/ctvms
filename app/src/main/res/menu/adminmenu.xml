@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Home"
+        android:id="@+id/adminhomeFragment"
+        android:icon="@drawable/home"/>
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/manageFragment"
+        android:title="Manage"
+        android:icon="@drawable/manage"/>
+
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reportsFragment"
+        android:title="Reports"
+        android:icon="@drawable/report"/>
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/transactionsFragment"
+        android:title="Transactions"
+        android:icon="@drawable/transactions"/>
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/settingsFragment"
+        android:title="Settings"
+        android:icon="@drawable/settings"/>
+</menu>
