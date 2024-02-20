@@ -12,7 +12,5 @@ This project is protected under the following terms:
 
 5. Commercial Use: Any use of this software for commercial purposes is strictly prohibited without the explicit written permission of the author(s).
 
-For a full text of this license, please visit [URL].
-
 [drbenjaminlouis/ctvms]
 [20 - Feb - 2024]
