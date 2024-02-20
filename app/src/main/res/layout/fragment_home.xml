@@ -22,23 +22,24 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout5"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout6"
-        app:layout_constraintStart_toStartOf="@+id/textView"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <LinearLayout
             android:id="@+id/totalcustomerlayout"
-            android:layout_width="180dp"
+            android:layout_width="0dp"
             android:layout_height="80dp"
-            android:layout_marginStart="8dp"
             android:animateLayoutChanges="true"
             android:background="@drawable/homeinfoshape"
             android:backgroundTint="#64CC25"
             android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/view3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -76,13 +77,13 @@
 
         <LinearLayout
             android:id="@+id/activecustomerlayout"
-            android:layout_width="180dp"
+            android:layout_width="0dp"
             android:layout_height="80dp"
-            android:layout_marginStart="8dp"
             android:background="@drawable/homeinfoshape"
             android:backgroundTint="#3C25CC"
             android:orientation="vertical"
-            app:layout_constraintStart_toEndOf="@+id/totalcustomerlayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/view3"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -119,12 +120,13 @@
 
         <LinearLayout
             android:id="@+id/inactivecustomerlayout"
-            android:layout_width="180dp"
+            android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/homeinfoshape"
             android:backgroundTint="#CC2525"
             android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/view3"
             app:layout_constraintStart_toStartOf="@+id/totalcustomerlayout"
             app:layout_constraintTop_toBottomOf="@+id/totalcustomerlayout">
 
@@ -162,14 +164,14 @@
 
         <LinearLayout
             android:id="@+id/renewcustomerlayout"
-            android:layout_width="180dp"
+            android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/homeinfoshape"
             android:backgroundTint="#D6AA0D"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/activecustomerlayout"
+            app:layout_constraintStart_toEndOf="@+id/view3"
             app:layout_constraintTop_toBottomOf="@+id/activecustomerlayout">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -205,12 +207,14 @@
 
         <LinearLayout
             android:id="@+id/receviedlayout"
-            android:layout_width="180dp"
+            android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/homeinfoshape"
             android:backgroundTint="#D61264"
             android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/view3"
             app:layout_constraintStart_toStartOf="@+id/inactivecustomerlayout"
             app:layout_constraintTop_toBottomOf="@+id/inactivecustomerlayout">
 
@@ -248,14 +252,15 @@
 
         <LinearLayout
             android:id="@+id/pendinglayout"
-            android:layout_width="180dp"
+            android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/homeinfoshape"
             android:backgroundTint="#25CC86"
             android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/renewcustomerlayout"
+            app:layout_constraintStart_toEndOf="@+id/view3"
             app:layout_constraintTop_toBottomOf="@+id/renewcustomerlayout">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -289,6 +294,15 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="8dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
@@ -342,7 +356,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayout5"
+            android:id="@+id/duecheckerlayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -376,7 +390,7 @@
             android:layout_marginStart="24dp"
             android:gravity="center"
             android:orientation="vertical"
-            app:layout_constraintStart_toEndOf="@+id/linearLayout5"
+            app:layout_constraintStart_toEndOf="@+id/duecheckerlayout"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView

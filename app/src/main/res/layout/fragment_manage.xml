@@ -9,11 +9,12 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="393dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
         android:src="@drawable/topabstract"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -31,7 +32,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout7"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
@@ -65,7 +66,7 @@
                 android:fontFamily="@font/poppins"
                 android:text="Plans"
                 android:textColor="@color/white"
-                android:textSize="13sp" />
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -93,7 +94,7 @@
                 android:fontFamily="@font/poppins"
                 android:text="Edit Details"
                 android:textColor="@color/white"
-                android:textSize="13sp" />
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -121,7 +122,7 @@
                 android:fontFamily="@font/poppins"
                 android:text="Due Checker"
                 android:textColor="@color/white"
-                android:textSize="13sp" />
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -149,23 +150,23 @@
                 android:fontFamily="@font/poppins"
                 android:text="Remove User"
                 android:textColor="@color/white"
-                android:textSize="13sp" />
+                android:textSize="12sp" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout6"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16">
 
         <LinearLayout
-            android:id="@+id/linearLayout4"
+            android:id="@+id/paymentlayout"
             android:layout_width="93dp"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -189,18 +190,18 @@
                 android:fontFamily="@font/poppins"
                 android:text="Payment"
                 android:textColor="@color/white"
-                android:textSize="13sp" />
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayout5"
+            android:id="@+id/statusupdatelayout"
             android:layout_width="93dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/linearLayout4"
+            app:layout_constraintStart_toEndOf="@+id/paymentlayout"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
@@ -218,7 +219,7 @@
                 android:gravity="center"
                 android:text="Status Update"
                 android:textColor="@color/white"
-                android:textSize="13sp" />
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -228,7 +229,7 @@
             android:layout_marginStart="4dp"
             android:gravity="center"
             android:orientation="vertical"
-            app:layout_constraintStart_toEndOf="@+id/linearLayout5"
+            app:layout_constraintStart_toEndOf="@+id/statusupdatelayout"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
@@ -246,7 +247,7 @@
                 android:fontFamily="@font/poppins"
                 android:text="New User"
                 android:textColor="@color/white"
-                android:textSize="13sp" />
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -274,7 +275,7 @@
                 android:fontFamily="@font/poppins"
                 android:text="Complaints"
                 android:textColor="@color/white"
-                android:textSize="13sp" />
+                android:textSize="12sp" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -283,19 +284,24 @@
         android:id="@+id/constraintLayout8"
         android:layout_width="0dp"
         android:layout_height="51dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/constraintLayout7"
-        app:layout_constraintStart_toStartOf="@+id/constraintLayout7"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout7">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textInputEditText"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:background="@drawable/searchbg"
             android:fontFamily="@font/poppins"
             android:hint="Search Customers"
+            android:inputType="text"
+            android:maxLines="1"
             android:paddingStart="10dp"
+            android:textColor="@color/white"
             android:textColorHint="#9B9B9B"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -319,9 +325,7 @@
         android:id="@+id/managerecyclerview"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="4dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="4dp"
         android:background="@drawable/recentshape"
         android:nestedScrollingEnabled="true"
         android:padding="10dp"
