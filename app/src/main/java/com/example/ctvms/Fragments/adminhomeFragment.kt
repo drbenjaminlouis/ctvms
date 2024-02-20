@@ -1,8 +1,8 @@
 package com.example.ctvms.Fragments
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
@@ -10,10 +10,13 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ctvms.R
 import com.example.ctvms.adapter.recentAdapter
+import com.example.ctvms.addCustomer
 import com.example.ctvms.databinding.FragmentHomeBinding
+import com.example.ctvms.dueChecker
 
 class adminhomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
@@ -24,6 +27,16 @@ class adminhomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
+        val add_user = binding.newuserlayout
+        val due_checker = binding.duecheckerlayout
+        add_user.setOnClickListener(){
+            val intent = Intent(requireContext(), addCustomer::class.java)
+            startActivity(intent)
+        }
+        due_checker.setOnClickListener(){
+            val intent = Intent(requireContext(), dueChecker::class.java)
+            startActivity(intent)
+        }
         setupTouchListeners(
             binding.totalcustomerlayout, binding.totalcusicon, binding.totalcustlabel,
             R.drawable.totalcusicon, "100", "Total Customers"
