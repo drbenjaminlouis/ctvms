@@ -1,31 +1,33 @@
 package com.example.ctvms
 
+import CustomerDataAdapter
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.Firebase
+import com.google.firebase.firestore.firestore
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [customerSearchContainer.newInstance] factory method to
- * create an instance of this fragment.
- */
-class customerSearchContainer : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+class CustomerSearchContainer : Fragment() {
+    private var onCrfValueClickListener: OnCrfValueClickListener? = null
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: CustomerDataAdapter
+    private lateinit var sharedPreferences: SharedPreferences
+    interface OnCrfValueClickListener {
+        fun onCrfValueClicked(crfValue: String,custName:String)
+    }
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is OnCrfValueClickListener) {
+            onCrfValueClickListener = context
+        } else {
+            throw RuntimeException("$context must implement OnCrfValueClickListener")
         }
     }
 
@@ -33,27 +35,95 @@ class customerSearchContainer : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_customer_search_container, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_customer_search_container, container, false)
+        recyclerView = rootView.findViewById(R.id.paymentCustomerListView)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        sharedPreferences = requireActivity().getSharedPreferences("customer_data", Context.MODE_PRIVATE)
+
+        // Initialize adapter with an empty list initially
+        adapter = CustomerDataAdapter(emptyList()) { crfValue,custName ->
+            // Call the interface method when crfValue is clicked
+            onCrfValueClickListener?.onCrfValueClicked(crfValue,custName)
+        }
+        recyclerView.adapter = adapter
+
+        // Fetch data from Firestore
+        fetchDataFromFirestore()
+
+        return rootView
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment customerSearchContainer.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            customerSearchContainer().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+
+
+    private fun fetchDataFromFirestore() {
+        // Replace "a@gmail.com" with the actual admin email
+        val adminEmail = "abyjose377@gmail.com"
+        val db = Firebase.firestore
+
+        db.collection("admins")
+            .document(adminEmail)
+            .collection("customers")
+            .get()
+            .addOnSuccessListener { result ->
+                val customerList = mutableListOf<Customer>()
+
+                for ((index, document) in result.documents.withIndex()) {
+                    if (index >= 10) break // Stop after first 10 data
+
+                    val customerName = document.getString("cusName")
+                    val crfNo = document.getString("cusCRF")
+                    val gender = document.getString("cusGender")
+
+                    val avatar = when (gender) {
+                        "Male" -> getRandomMaleAvatar()
+                        "Female" -> getRandomFemaleAvatar()
+                        else -> R.drawable.avatar
+                    }
+
+                    customerName?.let { name ->
+                        crfNo?.let { crf ->
+                            customerList.add(Customer(name, crf, avatar))
+                        }
+                    }
                 }
+
+                // Update adapter data
+                adapter.updateData(customerList)
+
+                // Save data to SharedPreferences
+                saveDataToSharedPreferences(customerList)
             }
+            .addOnFailureListener { exception ->
+                println("Error fetching data from Firestore: $exception")
+            }
+    }
+
+    private fun saveDataToSharedPreferences(customerList: List<Customer>) {
+        val editor = sharedPreferences.edit()
+        for ((index, customer) in customerList.withIndex()) {
+            editor.putString("Name$index", customer.name)
+            editor.putString("CrfNo$index", customer.crfNo)
+            editor.putInt("Avatar$index", customer.avatarResourceId)
+        }
+        editor.apply()
+    }
+
+    private fun getRandomMaleAvatar(): Int {
+        val maleAvatars = listOf(
+            R.drawable.avatar,
+            R.drawable.avatar3,
+            R.drawable.avatar4
+        )
+        return maleAvatars.random()
+    }
+
+    private fun getRandomFemaleAvatar(): Int {
+        val femaleAvatars = listOf(
+            R.drawable.avatar2,
+            R.drawable.female_avatar2,
+            R.drawable.female_avatar4
+        )
+        return femaleAvatars.random()
     }
 }

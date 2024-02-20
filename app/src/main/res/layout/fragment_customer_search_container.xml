@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
     tools:context=".paymentActivity">
 
     <com.google.android.material.textfield.TextInputEditText
@@ -29,8 +28,8 @@
         android:layout_width="100dp"
         android:layout_height="0dp"
         android:layout_marginEnd="16dp"
-        android:padding="10dp"
         android:background="@drawable/searchgreenshape"
+        android:padding="10dp"
         android:src="@drawable/searchwhite"
         app:layout_constraintBottom_toBottomOf="@+id/textInputEditText8"
         app:layout_constraintEnd_toEndOf="parent"

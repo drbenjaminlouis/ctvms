@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
-    tools:context=".PaymentDetails">
+    tools:context=".dueCheckerDetais">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/fetchBtn"
         android:layout_width="361dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
         android:background="@drawable/greenbutton"
         android:fontFamily="@font/lato"
         android:text="Fetch Details"
@@ -124,7 +122,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/textView40"
+                android:id="@+id/DuecrfValue"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="8dp"
@@ -141,7 +139,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/paymentDNameValue"
+                android:id="@+id/DueCusNameValue"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="8dp"
@@ -155,10 +153,10 @@
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView40" />
+                app:layout_constraintTop_toBottomOf="@+id/DuecrfValue" />
 
             <TextView
-                android:id="@+id/paymentDOutstandingValue"
+                android:id="@+id/DueCusOutStandingValue"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_marginEnd="16dp"
@@ -166,15 +164,15 @@
                 android:fontFamily="@font/poppins"
                 android:gravity="center_vertical"
                 android:paddingStart="10dp"
-                android:text="Total Outstanding"
                 android:textColor="@color/white"
                 android:textSize="12sp"
+                android:text="₹"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/paymentDNameValue" />
+                app:layout_constraintTop_toBottomOf="@+id/DueCusNameValue" />
 
             <Spinner
-                android:id="@+id/PaymentYearSpinner"
+                android:id="@+id/DueYearValue"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="8dp"
@@ -188,16 +186,16 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/paymentDOutstandingValue" />
+                app:layout_constraintTop_toBottomOf="@+id/DueCusOutStandingValue" />
 
             <ImageView
                 android:id="@+id/imageView20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/dropdownwhite"
-                app:layout_constraintBottom_toBottomOf="@+id/PaymentYearSpinner"
-                app:layout_constraintEnd_toEndOf="@+id/PaymentYearSpinner"
-                app:layout_constraintTop_toTopOf="@+id/PaymentYearSpinner" />
+                app:layout_constraintBottom_toBottomOf="@+id/DueYearValue"
+                app:layout_constraintEnd_toEndOf="@+id/DueYearValue"
+                app:layout_constraintTop_toTopOf="@+id/DueYearValue" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -231,9 +229,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/fragbackgroundshape"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
+        android:background="@drawable/fragbackgroundshape"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout22">
@@ -275,7 +273,7 @@
                     android:fontFamily="@font/poppins_semibold"
                     android:gravity="center"
                     android:text="Jan"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"/>
 
                 <TextView
                     android:id="@+id/janValue"
@@ -286,7 +284,8 @@
                     android:gravity="center"
                     android:text="NILL"
                     android:textColor="#E6EA0B"
-                    android:textSize="12sp" />
+                    android:textSize="9sp"
+                    android:tag="janValue"/>
             </LinearLayout>
 
             <LinearLayout
@@ -313,7 +312,8 @@
                     android:gravity="center"
                     android:text="NILL"
                     android:textColor="#E6EA0B"
-                    android:textSize="12sp" />
+                    android:textSize="9sp"
+                    android:tag="febValue"/>
 
             </LinearLayout>
 
@@ -341,7 +341,8 @@
                     android:gravity="center"
                     android:text="NILL"
                     android:textColor="#E6EA0B"
-                    android:textSize="12sp" />
+                    android:textSize="9sp"
+                    android:tag="marValue"/>
             </LinearLayout>
 
             <LinearLayout
@@ -368,7 +369,8 @@
                     android:gravity="center"
                     android:text="NILL"
                     android:textColor="#E6EA0B"
-                    android:textSize="12sp" />
+                    android:textSize="9sp"
+                    android:tag="aprValue"/>
             </LinearLayout>
 
             <LinearLayout
@@ -395,7 +397,8 @@
                     android:gravity="center"
                     android:text="NILL"
                     android:textColor="#E6EA0B"
-                    android:textSize="12sp" />
+                    android:textSize="9sp"
+                    android:tag="mayValue"/>
             </LinearLayout>
 
             <LinearLayout
@@ -422,7 +425,8 @@
                     android:gravity="center"
                     android:text="NILL"
                     android:textColor="#E6EA0B"
-                    android:textSize="12sp" />
+                    android:textSize="9sp"
+                    android:tag="junValue"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -460,7 +464,8 @@
                     android:gravity="center"
                     android:text="NILL"
                     android:textColor="#E6EA0B"
-                    android:textSize="12sp" />
+                    android:textSize="9sp"
+                    android:tag="julValue"/>
 
             </LinearLayout>
 
@@ -488,7 +493,8 @@
                     android:gravity="center"
                     android:text="NILL"
                     android:textColor="#E6EA0B"
-                    android:textSize="12sp" />
+                    android:textSize="9sp"
+                    android:tag="augValue"/>
             </LinearLayout>
 
             <LinearLayout
@@ -515,7 +521,8 @@
                     android:gravity="center"
                     android:text="NILL"
                     android:textColor="#E6EA0B"
-                    android:textSize="12sp" />
+                    android:textSize="9sp"
+                    android:tag="sepValue"/>
             </LinearLayout>
 
             <LinearLayout
@@ -542,7 +549,8 @@
                     android:gravity="center"
                     android:text="NILL"
                     android:textColor="#E6EA0B"
-                    android:textSize="12sp" />
+                    android:textSize="9sp"
+                    android:tag="octValue"/>
             </LinearLayout>
 
             <LinearLayout
@@ -569,7 +577,8 @@
                     android:gravity="center"
                     android:text="NILL"
                     android:textColor="#E6EA0B"
-                    android:textSize="12sp" />
+                    android:textSize="9sp"
+                    android:tag="novValue"/>
             </LinearLayout>
 
             <LinearLayout
@@ -596,7 +605,8 @@
                     android:gravity="center"
                     android:text="NILL"
                     android:textColor="#E6EA0B"
-                    android:textSize="12sp" />
+                    android:textSize="9sp"
+                    android:tag="decValue"/>
             </LinearLayout>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
