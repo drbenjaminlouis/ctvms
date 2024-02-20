@@ -10,25 +10,13 @@
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
+        android:layout_height="180dp"
+        android:rotationY="0"
+        android:scaleType="fitXY"
         android:src="@drawable/topabstract"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/createtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/nicomoji"
-        android:text="Create Account"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/constraintLayout3"
-        app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
 
     <ImageView
         android:id="@+id/backBtn"
@@ -46,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/nicomoji"
-        android:text="Payment"
+        android:text="Add Customer"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,20 +45,16 @@
         android:id="@+id/addCusContainer"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createtitle" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout3"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16">
