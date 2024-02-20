@@ -39,11 +39,10 @@ To run the system locally, follow these steps:
 
 ## UI Design 
 
-Here is the link to UI : [Click Here](https://www.figma.com/proto/yOD1ENYK0fY8IDPbKt6D3n/CTVMS?type=design&node-id=1-3&t=KMWdNnItSrYw2BWB-1&scaling=scale-down&page-id=0%3A1&mode=design)
+Here is the link to Figma Design : [Click Here](https://www.figma.com/proto/yOD1ENYK0fY8IDPbKt6D3n/CTVMS?type=design&node-id=1-3&t=KMWdNnItSrYw2BWB-1&scaling=scale-down&page-id=0%3A1&mode=design)
+<br>
+<br>
 <br>
 <br>
 
-![Uploading CTVMS.svg…]()
-
-
-![CTVMS (1)](https://github.com/drbenjaminlouis/ctvms/assets/64739511/72275036-f8ed-4218-9e27-19c4d62e3f5e)
+![CTVMS (1)](https://github.com/drbenjaminlouis/ctvms/assets/64739511/adc0d091-0c24-4c3e-b333-f73652e39590)
