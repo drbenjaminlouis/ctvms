@@ -15,56 +15,82 @@
         android:theme="@style/Theme.CTVMS"
         tools:targetApi="31">
         <activity
-            android:name=".editCustomer"
+            android:name=".editPlan"
             android:exported="false" />
+        <activity
+            android:name=".addPlan"
+            android:exported="false" />
+        <activity
+            android:name=".managePlan"
+            android:exported="false" />
+        <activity
+            android:name=".editCustomer"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".customerSelector"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".customerDetails"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".dueChecker"
-            android:exported="false" />
-        <activity
-            android:name=".addCustomer"
-            android:exported="false" />
-        <activity
-            android:name=".paymentActivity"
-            android:exported="false" />
-        <activity
-            android:name=".helpCenter"
-            android:exported="false" />
-        <activity
-            android:name=".aboutApp"
-            android:exported="false" />
-        <activity
-            android:name=".adminChangePassword"
-            android:exported="false" />
-        <activity
-            android:name=".adminNotifications"
-            android:exported="false" />
-        <activity
-            android:name=".personalInfoAdmin"
-            android:exported="false" />
-        <activity
-            android:name=".adminHome"
-            android:exported="false" />
-        <activity
-            android:name=".ForgotPassword"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".createaccount_personal"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".paymentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".helpCenter"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".aboutApp"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".adminChangePassword"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".adminNotifications"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personalInfoAdmin"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".adminHome"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".addCustomer"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".AdminLogin"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".SplashScreen"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
