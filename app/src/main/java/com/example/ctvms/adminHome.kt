@@ -1,8 +1,7 @@
 package com.example.ctvms
 
-import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
@@ -12,10 +11,14 @@ class adminHome : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admin_home)
-        window.statusBarColor = ContextCompat.getColor(this,R.color.black)
-        val NavController=findNavController(R.id.mainfragcontainer)
-        var bottomnav = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-        bottomnav.setupWithNavController(NavController)
-
+        window.statusBarColor = ContextCompat.getColor(this, R.color.black)
+        if (!NetworkUtils.isNetworkAvailable(this)) {
+            NetworkUtils.showNetworkAlert(this)
+        } else {
+            // Network is available, proceed with your logic
+        }
+        val navController = findNavController(R.id.mainfragcontainer)
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        bottomNav.setupWithNavController(navController)
     }
 }
