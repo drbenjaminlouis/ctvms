@@ -1,0 +1,18 @@
+Custom Restrictive License
+
+This project is protected under the following terms:
+
+1. Non-Commercial Use: You are allowed to use, copy, and distribute this software for non-commercial purposes only.
+
+2. Attribution: If you distribute this software, you must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+
+3. No Derivatives: You may not alter, transform, or build upon this software.
+
+4. No Warranty: This software is provided "as is," without warranty of any kind, express or implied. The author(s) shall not be liable for any damages resulting from the use or inability to use the software.
+
+5. Commercial Use: Any use of this software for commercial purposes is strictly prohibited without the explicit written permission of the author(s).
+
+For a full text of this license, please visit [URL].
+
+[drbenjaminlouis/ctvms]
+[20 - Feb - 2024]
