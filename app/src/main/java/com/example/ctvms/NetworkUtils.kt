@@ -23,6 +23,7 @@ object NetworkUtils {
             setCancelable(false)
         }.create()
 
+
         val okBtn = myCustomAlert.getOkButton()
         alert.show()
         okBtn.setOnClickListener {
